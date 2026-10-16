@@ -2,7 +2,7 @@
 
 Instale o **KWIK Agentes** na minha máquina (**não neste projeto**) e deixe tudo rodando e ligado aos meus agentes: **Claude Code**, **Codex** ou os dois.
 
-- **Repositório:** https://github.com/SEU-USUARIO/kwik-agentes
+- **Repositório:** https://github.com/kauabreno88-spec/kwik-agentes
 - **Pasta:** `~/kwik-agentes` (no Windows, dentro do WSL)
 - **Endereço final:** https://kwik.localhost
 - **Porta local:** `5945` (K-W-I-K no teclado do telefone)
@@ -54,7 +54,7 @@ Descubra quais agentes eu uso e ligue **todos** os que existirem:
 
 ### 2. Baixar
 
-- `git clone https://github.com/SEU-USUARIO/kwik-agentes.git ~/kwik-agentes`
+- `git clone https://github.com/kauabreno88-spec/kwik-agentes.git ~/kwik-agentes`
 - `cd ~/kwik-agentes && npm install`
 - Se a pasta já existir, atualize: `git pull && npm install`.
 

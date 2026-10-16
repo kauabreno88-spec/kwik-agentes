@@ -41,7 +41,7 @@ instala tudo sozinho (Docker, plugin, hooks e o endereço https://kwik.localhost
 Precisa de **Node.js 22.12+**, **git** e **Docker** (Docker Desktop ou Docker Engine com Compose v2).
 
 ```bash
-git clone https://github.com/SEU-USUARIO/kwik-agentes.git ~/kwik-agentes
+git clone https://github.com/kauabreno88-spec/kwik-agentes.git ~/kwik-agentes
 cd ~/kwik-agentes
 npm install                 # não baixa nada: o projeto não tem dependências
 
