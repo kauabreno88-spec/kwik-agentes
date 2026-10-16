@@ -1,0 +1,25 @@
+{
+  "name": "kwik-agentes",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Painel de agentes da KWIK: veja ao vivo o que o Claude Code e o Codex estão fazendo, com a identidade visual da KWIK.",
+  "license": "UNLICENSED",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "start": "node server/index.mjs",
+    "dev": "node --watch server/index.mjs",
+    "test": "node --test test/*.test.mjs",
+    "docker:up": "node scripts/docker-up.mjs",
+    "docker:down": "node scripts/docker-up.mjs --down",
+    "docker:logs": "docker compose logs -f kwik",
+    "claude:install": "node scripts/claude-install.mjs install",
+    "claude:uninstall": "node scripts/claude-install.mjs uninstall",
+    "claude:status": "node scripts/claude-install.mjs status",
+    "codex:install": "node scripts/codex-install.mjs install",
+    "codex:uninstall": "node scripts/codex-install.mjs uninstall",
+    "codex:status": "node scripts/codex-install.mjs status"
+  }
+}

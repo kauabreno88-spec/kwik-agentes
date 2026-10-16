@@ -1,0 +1,27 @@
+# KWIK Agentes no Docker. Suba com `npm run docker:up` (não com `docker compose up` direto): o script gera o
+# docker-compose.override.yml (fora do git) com as pastas das suas contas montadas SOMENTE LEITURA:
+#   Claude Code: <conta>/projects e <conta>/sessions   (nunca a pasta inteira: lá ficam credenciais)
+#   Codex:       <pasta>/sessions                      (nunca auth.json, config.toml nem o histórico)
+name: kwik-agentes
+
+services:
+  kwik:
+    build: .
+    image: kwik-agentes:local
+    container_name: kwik-agentes
+    restart: unless-stopped
+    # Os transcripts são sensíveis: a porta fica SÓ no próprio computador (127.0.0.1).
+    ports:
+      - "${KWIK_BIND:-127.0.0.1}:${KWIK_PORT:-5945}:5945"
+    environment:
+      # Nomes extras aceitos no cabeçalho Host, além de localhost e *.localhost (separados por vírgula).
+      KWIK_ALLOWED_HOSTS: ${KWIK_ALLOWED_HOSTS:-}
+    # Endurecimento: sistema de arquivos só leitura, sem capabilities, sem novos privilégios.
+    read_only: true
+    tmpfs:
+      - /tmp:size=32m
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    init: true

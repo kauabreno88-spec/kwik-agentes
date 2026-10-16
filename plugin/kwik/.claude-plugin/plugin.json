@@ -1,0 +1,16 @@
+{
+  "name": "kwik-agentes",
+  "displayName": "KWIK Agentes",
+  "version": "1.0.0",
+  "description": "Liga o Claude Code ao painel KWIK Agentes (https://kwik.localhost): o painel fica sabendo na hora quando a sessão recebe um pedido, precisa de você ou termina.",
+  "author": {
+    "name": "KWIK Contabilidade Inteligente",
+    "url": "https://kwikcontabilidade.com.br"
+  },
+  "keywords": [
+    "kwik",
+    "agentes",
+    "painel",
+    "hooks"
+  ]
+}

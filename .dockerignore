@@ -1,0 +1,8 @@
+node_modules
+.git
+docker-compose.override.yml
+.env
+test
+plugin
+scripts
+*.md

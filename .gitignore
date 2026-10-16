@@ -1,0 +1,5 @@
+node_modules/
+docker-compose.override.yml
+.env
+*.kwik-backup-*
+.DS_Store
